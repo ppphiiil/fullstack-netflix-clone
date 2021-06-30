@@ -1,0 +1,11 @@
+const mongoose = require("mongoose");
+
+const episodeSchema = new mongoose.Schema({
+  id: { type: Number, required: true },
+  title: { type: String, required: true },
+  overview: { type: String, required: true },
+  seasonNumber: { type: Number, required: true },
+  episodeNumber: { type: Number, required: true },
+});
+
+module.exports = episodeSchema;
