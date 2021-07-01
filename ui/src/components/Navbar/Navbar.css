@@ -1,0 +1,26 @@
+.navbar {
+  align-items: center;
+  display: flex;
+  margin: 1rem auto;
+  width: 90%;
+}
+
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0 1rem;
+}
+
+.nav-link {
+  color: var(--mainWhite);
+  font-size: 1rem;
+  font-weight: 200;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 0 0.5rem;
+}
+
+.nav-link:hover {
+  font-weight: 500;
+}
