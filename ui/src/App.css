@@ -1,0 +1,46 @@
+:root {
+  --mainWhite: #ffffff;
+  --lightGrey: #bbbbbb;
+  --darkGrey: #808080;
+  --mainBlack: #151515;
+  --mainRed: #e20017;
+}
+
+body {
+  background-color: var(--mainBlack);
+  color: var(--mainWhite);
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.img-company {
+  height: 2rem;
+}
+
+.text-blue {
+  color: var(--mainBlue);
+}
+
+.text-bright {
+  color: var(--lightBlue);
+}
+
+.text-title {
+  letter-spacing: 0.3rem;
+  text-transform: capitalize;
+}
+
+.text-yellow {
+  color: var(--mainYellow);
+}
+
+/* .btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainBlue);
+  border: 0.1rem solid var(--mainDark) !important;
+} */
+
+.btn-black:hover {
+  background: var(--lightBlue) !important;
+}
