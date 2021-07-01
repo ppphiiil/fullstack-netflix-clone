@@ -1,4 +1,6 @@
-
+body{
+     background-color: #151515;
+}
 /**
  * This is the Container for the footer
  */
@@ -83,10 +85,10 @@
 
     /* styling */
     border: 1px solid #808080;
-    padding: 10px 15px;
+    padding: 5px 15px;
     margin-bottom: 20px;
     cursor: pointer;
-    line-height: 1;
+    /* line-height: 1;  */
 }
 
 .btn-servicecode:hover {
