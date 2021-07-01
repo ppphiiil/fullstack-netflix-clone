@@ -24,7 +24,7 @@ export default class Navbar extends Component {
               </li>
               <li className="nav-item">
                 <Link to="/tv-shows" className="nav-link">
-                  <span style={{ textTransform: 'uppercase' }}>tv</span> shows
+                  <span style={{ textTransform: 'uppercase' }}>tv</span>shows
                 </Link>
               </li>
               <li className="nav-item">
