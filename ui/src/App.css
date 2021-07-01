@@ -1,4 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
 :root {
+  font-family: 'Martel Sans', Verdana, Geneva, Tahoma, sans-serif;
+
   --mainWhite: #ffffff;
   --lightGrey: #bbbbbb;
   --darkGrey: #808080;
@@ -12,25 +16,21 @@ body {
   font-family: 'Roboto', sans-serif !important;
 }
 
-.img-company {
-  height: 2rem;
+.text-white {
+  color: var(--mainWhite);
 }
 
-.text-blue {
-  color: var(--mainBlue);
+.text-light-grey {
+  color: var(--lightGrey);
 }
 
-.text-bright {
-  color: var(--lightBlue);
+.text-dark-grey {
+  color: var(--darkGrey);
 }
 
 .text-title {
   letter-spacing: 0.3rem;
   text-transform: capitalize;
-}
-
-.text-yellow {
-  color: var(--mainYellow);
 }
 
 /* .btn-black {
@@ -42,5 +42,5 @@ body {
 } */
 
 .btn-black:hover {
-  background: var(--lightBlue) !important;
+  background: var(--lightGrey) !important;
 }
