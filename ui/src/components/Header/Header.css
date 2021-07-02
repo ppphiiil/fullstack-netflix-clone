@@ -1,0 +1,12 @@
+.header-container {
+  /* max-width: 1200; */
+  display: flex;
+  width: 90%;
+  margin: 0.5rem auto;
+}
+
+.img-company {
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+}

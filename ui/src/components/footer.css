@@ -1,0 +1,119 @@
+body{
+     background-color: #151515;
+}
+
+h2{
+     color: #ffffff;
+     font-size: 1rem;
+     font-weight: 400;
+}
+/**
+ * This is the Container for the footer
+ */
+.footer-container {
+    /* display */
+    width: 90%;
+    /* max-width: 1200px; */
+
+    /* styling */
+    background-color: #151515;
+    color: #808080;
+    font-size: 13px;
+    margin: 0 auto;
+}
+
+/**
+ * flex container with all the single text links inside
+ */
+.footer-link-container {
+    /* display */
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+    flex-flow: row wrap;
+
+    /* styling */
+    margin-bottom: 20px;
+}
+
+/**
+ * single text links
+ */
+.footer-links-item {
+    /* display */
+    width: 25%;
+    min-width: 230px;
+    word-wrap: none;
+
+    /* styling */
+    color: #808080;
+    font-weight: 400;
+    margin-bottom: 10px;
+    white-space: pre;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width: 450px){
+    .footer-links-item {
+    width: 50%;
+    min-width: 150px;
+    }
+}
+
+/**
+ * Text link on hover
+ */
+.footer-links-item:hover {
+    text-decoration: underline;
+}
+
+/**
+ * 
+ */
+.copyright {
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+.footer-icon-container {
+    font-size: 1rem;
+    margin-bottom: 0px;
+}
+
+.footer-icon {
+    margin-right: 24px;
+}
+
+.btn-servicecode {
+     /* display */
+    display: inline-block;
+
+    /* styling */
+    border: 1px solid #808080;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.btn-servicecode:hover {
+    color: white;
+}
+
+/* ================================= Reset */
+
+*::before,
+*::after,
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
+
+:root {
+    font-family: "Martel Sans", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ================================= Reset End */
