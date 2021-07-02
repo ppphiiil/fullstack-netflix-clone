@@ -7,18 +7,30 @@ import Hero from './components/Hero/Hero';
 import Footer from "./components/Footer";
 import VideoSlider from "./components/VideoSlider/VideoSlider"
 
+import { NavLink, Route, Switch, HashRouter } from "react-router-dom"
+
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <HashRouter>
+      <div className="App">
+        <Header />
 
-      <Hero />
 
-      <VideoSlider title={ "Popular on Netflix" } />
+        <Switch>
+          <Route exact path="/">
+            <Hero />
+            <VideoSlider title={ "Popular on Netflix" } />
+          </Route>
+          {/* <Route  path="/:tv_id">
+          </Route>
+          */}
 
-      <Footer />
-    </div>
+
+        </Switch>
+        <Footer />
+      </div>
+    </HashRouter>
   );
 }
 
