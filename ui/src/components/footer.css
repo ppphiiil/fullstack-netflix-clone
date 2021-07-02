@@ -1,13 +1,19 @@
 body{
      background-color: #151515;
 }
+
+h2{
+     color: #ffffff;
+     font-size: 1rem;
+     font-weight: 400;
+}
 /**
  * This is the Container for the footer
  */
 .footer-container {
     /* display */
     width: 90%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
 
     /* styling */
     background-color: #151515;
@@ -50,7 +56,7 @@ body{
 
 @media screen and (max-width: 450px){
     .footer-links-item {
-    width: 25%;
+    width: 50%;
     min-width: 150px;
     }
 }
@@ -88,7 +94,6 @@ body{
     padding: 5px 15px;
     margin-bottom: 20px;
     cursor: pointer;
-    /* line-height: 1;  */
 }
 
 .btn-servicecode:hover {
