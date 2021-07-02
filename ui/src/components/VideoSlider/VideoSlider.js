@@ -35,8 +35,10 @@ export default function VideoSlider( props ) {
     /**
          * move images to the right side, if you click left the images move to the right side
          */
-    const left = () => {
+    const left = ( e ) => {
         //stop moving at the end
+        console.log( "event", e );
+        e.stopPropagation();
         console.log( 'move to right', position );
 
         setposition( position + 100 );
@@ -71,11 +73,11 @@ export default function VideoSlider( props ) {
 
                 </div>
                 <div className="nav-buttons ">
-                    <button id="left" onClick={ left } className="navstyle nav-left">
+                    <button id="left" onClick={ ( e ) => { left( e ) } } className="navstyle nav-left">
                         <i class="fa-3x fas fa-chevron-left" />
                     </button>
                     <button id="right" onClick={ right } className="navstyle nav-right">
-                        <button class="fas fa-chevron-right fa-3x" />
+                        <i class="fas fa-chevron-right fa-3x" />
                     </button>
 
                 </div>

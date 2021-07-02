@@ -1,5 +1,5 @@
 import React from 'react';
-import './VideoSlider.css';
+import './VideoItem.css';
 
 export default function VideoItem( props ) {
     return (
