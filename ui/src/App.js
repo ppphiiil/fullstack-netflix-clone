@@ -1,19 +1,25 @@
-
 import React from 'react';
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+
+import '../src/App.css';
+import Header from './components/Header/Header';
+import Hero from './components/Hero/Hero';
+
+import Footer from "./components/Footer";
 import VideoSlider from "./components/VideoSlider/VideoSlider"
+
 
 function App() {
   return (
     <div className="App">
-      <h1>My React App</h1>
       <Header />
+
+      <Hero />
+
       <VideoSlider title={ "Popular on Netflix" } />
+
       <Footer />
     </div>
   );
 }
-
 
 export default App;
