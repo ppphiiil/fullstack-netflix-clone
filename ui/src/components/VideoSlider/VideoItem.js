@@ -2,7 +2,7 @@ import React from 'react'
 import "./VideoSlider.css"
 
 export default function VideoItem( props ) {
-    return ( <a href="/">
+    return ( <a to="/">
 
         <div className="VideoItem-container">
 
