@@ -59,7 +59,7 @@ const seedData = async () => {
                     return {
                       id: ep.id,
                       title: ep.name,
-                      overview: ep.ovreview,
+                      overview: ep.overview,
                       seasonNumber: ep.season_number,
                       episodeNumber: ep.episode_number,
                       image: ep.still_path,
