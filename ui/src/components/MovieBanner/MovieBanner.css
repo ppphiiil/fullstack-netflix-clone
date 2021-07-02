@@ -1,0 +1,44 @@
+.movie-banner {
+  position: relative;
+}
+
+.movie-pic {
+  width: 100%;
+  height: auto;
+  background: center;
+}
+
+.movie-description-container {
+  position: absolute;
+  bottom: 60px;
+  left: 50px;
+}
+
+.movie-name {
+  text-transform: capitalize;
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.movie-text {
+  width: 450px;
+  font-weight: 300;
+  font-size: 0.85rem;
+}
+
+.movie-button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  margin: 20px 0;
+}
+
+.play-btn,
+.more-info-btn {
+  text-transform: capitalize;
+  padding: 8px 10px;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 5%;
+}

@@ -1,21 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const SearchField = ({ keyword, setKeyword }) => {
-  const BarStyling = {
-    width: '20rem',
-    background: '#F2F1F9',
-    border: 'none',
-    padding: '0.5rem',
+export default class SearchField extends React.Component {
+  state = { term: '' };
+
+  onFormSubmit = (event) => {
+    event.preventDefault();
+
+    this.props.onSubmit(this.state.term);
   };
-  return (
-    <input
-      style={BarStyling}
-      key="random1"
-      value={keyword}
-      placeholder={'search country'}
-      onChange={(e) => setKeyword(e.target.value)}
-    />
-  );
-};
 
-export default SearchBar;
+  render() {
+    return (
+      <div className="search-field">
+        <form onSubmit={this.onFormSubmit} className="ui form">
+          <div className="field">
+            <input
+              type="text"
+              value={this.state.term}
+              onChange={(e) => this.setState({ term: e.target.value })}
+            />
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
