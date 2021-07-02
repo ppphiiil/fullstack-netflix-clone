@@ -2,7 +2,7 @@ const express = require("express");
 
 const Route = express.Router();
 
-const SeriesModel = require("../models/seriesSchema");
+const { SeriesModel } = require("../models/seriesSchema");
 
 Route.get("/", async (req, res, next) => {
   try {
