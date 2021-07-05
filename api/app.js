@@ -1,11 +1,12 @@
 const express = require("express");
 require("./mongoConnect");
+// require("./connect");
 const cors = require("cors");
 
 const seriesRoute = require("./routes/seriesRoutes");
 const rowRoute = require("./routes/rowRoutes");
 
-const port = 3500;
+const port = 3000;
 
 const app = express();
 
