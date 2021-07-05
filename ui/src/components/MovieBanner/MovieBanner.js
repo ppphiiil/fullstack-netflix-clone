@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import LazyHero from 'react-lazy-hero';
+// import LazyHero from 'react-lazy-hero';
+import styled from 'styled-components';
 import './MovieBanner.css';
 
 export class MovieBanner extends Component {
@@ -7,17 +8,8 @@ export class MovieBanner extends Component {
     return (
       <React.Fragment>
         <div className="movie-banner">
-          <div className="movie-pic">
-            <LazyHero
-              imageSrc={
-                'https://images.cgames.de/images/gamestar/227/the-witcher-serie_6084849.jpg'
-              }
-              isfixed="false"
-              minHeight="100vh"
-              opacity={0.2}
-              //   parallaxOffset={100}
-            ></LazyHero>
-          </div>
+          <div className="gradient-top"></div>
+          <div className="movie-pic"></div>
           <div className="movie-description-container">
             <p className="movie-name">movie name</p>
             <p className="movie-text">
@@ -27,7 +19,9 @@ export class MovieBanner extends Component {
             </p>
             <div className="movie-button-container">
               <button type="button" className="play-btn">
-                <i class="fas fa-play"></i>
+                <span>
+                  <i class="fas fa-play"></i>
+                </span>
                 play
               </button>
               <button type="button" className="more-info-btn">
@@ -35,6 +29,7 @@ export class MovieBanner extends Component {
               </button>
             </div>
           </div>
+          <div className="gradient-bottom"></div>
         </div>
       </React.Fragment>
     );
