@@ -1,11 +1,15 @@
 import React from 'react';
 import './VideoSlider.css';
+import ModalButton from './../Modal/ModalButton';
+import styled from 'styled-components';
 
 export default function VideoItem(props) {
   return (
     <a to="/">
       <div className="VideoItem-container">
-        <img className="VideoItem-img " src={props.videoLink} alt="Video" />
+        <ModalButton>
+          <img className="VideoItem-img " src={props.videoLink} alt="Video" />
+        </ModalButton>
         <div className="VideoItem-detail-container">
           <div className="VideoItem-icon-container">
             <div>

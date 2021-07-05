@@ -29,11 +29,11 @@
 
 .movie-pic {
   width: 100%;
-  height: auto;
-  background: center
+  height: 100vh;
+  background: center top
     url('https://images.cgames.de/images/gamestar/227/the-witcher-serie_6084849.jpg');
 
-  height: 100vh;
+  padding: 30px 0;
   /* opacity: 0.2; */
 }
 
