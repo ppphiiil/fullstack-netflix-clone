@@ -1,12 +1,15 @@
 .slider {
     /* display */
-    width: 100%;
+    width: 90vw;
     height: 100%;
 
     /* position */
     position: relative;
     margin: 0px auto;
     margin-bottom: 30px;
+    /* overflow-x: hidden; */
+
+   
 }
 
 .slider-title {
@@ -21,7 +24,7 @@
 
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 90vw;
    
 
     
@@ -39,7 +42,7 @@
 .nav-buttons {
 
     height: 100%;
-    width: 100%;
+    width: 50%;
     display: block;
     z-index: 10000;
 

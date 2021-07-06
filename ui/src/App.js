@@ -12,9 +12,7 @@ import { NavLink, Route, Switch, HashRouter } from "react-router-dom"
 
 function App() {
 
-  useEffect( () => {
 
-  } )
 
   return (
     <HashRouter>

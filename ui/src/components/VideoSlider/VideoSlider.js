@@ -41,7 +41,7 @@ export default function VideoSlider( props ) {
         e.stopPropagation();
         console.log( 'move to right', position );
 
-        setposition( position + 100 );
+        setposition( position + 90 );
 
         //move each image
         images.map( image => {
@@ -55,7 +55,7 @@ export default function VideoSlider( props ) {
     const right = () => {
         //stop moving at the end
         console.log( 'move to left', position );
-        setposition( position - 100 );
+        setposition( position - 90 );
     };
 
     return (
