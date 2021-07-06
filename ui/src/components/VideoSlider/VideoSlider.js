@@ -38,7 +38,7 @@ export default function VideoSlider( props ) {
     const left = ( e ) => {
         //stop moving at the end
         console.log( "event", e );
-        e.stopPropagation();
+        e.stopPropagation(); //prevent from flickering
         console.log( 'move to right', position );
 
         setposition( position + 90 );

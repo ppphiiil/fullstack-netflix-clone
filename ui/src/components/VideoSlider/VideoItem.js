@@ -2,10 +2,24 @@ import React from 'react';
 import './VideoItem.css';
 
 export default function VideoItem( props ) {
+
+
+    //     const openDetails = ( e ) => {
+    //         console.log( "event in VideoItem", e );
+    //         e.stopPropagation();
+    //         console.log( e.target.nextElementSibling );
+    //         e.target.nextElementSibling.classList.remove( "VideoItem-detail-container-hide" );
+    //         e.target.nextElementSibling.classList.add( "VideoItem-detail-container-show" )
+    // 
+    //     }
+
+
+
+
     return (
         <a to="/">
 
-            <div className="VideoItem-container">
+            <div className="VideoItem-container"  >
 
                 <img className="VideoItem-img " src={ props.videoLink } alt="Video" />
                 <div className="VideoItem-detail-container">
@@ -36,6 +50,6 @@ export default function VideoItem( props ) {
             {/* <div className="VideoItem-detail-container">
             <p> Hallo</p>
         </div> */}
-        </a>
+        </a >
     );
 }
