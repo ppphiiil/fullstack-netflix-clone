@@ -17,7 +17,9 @@ export default function VideoSlider(props) {
    */
   // let images = [...document.querySelector( '.slider-image-container' ).children];
   let images = tvImages.map((tvImage) => {
-    return <VideoItem videoLink={tvImage.videoLink} />;
+    return (
+      <VideoItem videoLink={tvImage.videoLink} openModal={props.openModal} />
+    );
   });
 
   /**

@@ -2,15 +2,22 @@ import React from 'react';
 import './VideoSlider.css';
 import ModalButton from './../Modal/ModalButton';
 import styled from 'styled-components';
+import tvImages from './VideoSliderTestData/VideoSliderTestData';
 
 export default function VideoItem(props) {
   return (
     <a to="/">
       <div className="VideoItem-container">
-        <ModalButton>
-          <img className="VideoItem-img " src={props.videoLink} alt="Video" />
+        <ModalButton data={tvImages} openModal={props.openModal}>
+          <img
+            className="VideoItem-img "
+            src={props.videoLink}
+            alt="Video"
+            width="200"
+            height="180"
+          />
         </ModalButton>
-        <div className="VideoItem-detail-container">
+        {/* <div className="VideoItem-detail-container">
           <div className="VideoItem-icon-container">
             <div>
               <i class=" fa-2x fas fa-play-circle" />
@@ -35,8 +42,8 @@ export default function VideoItem(props) {
               enim sdfsfs fd sdfsdfs df
             </p>
             <p className="VideoItem-detail-genre">Test - Test -Test</p>
-          </div>
-        </div>
+          </div> 
+        </div> */}
       </div>
       {/* <div className="VideoItem-detail-container">
             <p> Hallo</p>
