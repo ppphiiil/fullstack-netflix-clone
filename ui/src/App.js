@@ -12,11 +12,18 @@ import VideoSlider from './components/VideoSlider/VideoSlider';
 import { NavLink, Route, Switch, HashRouter } from 'react-router-dom';
 
 function App() {
+
   const [showModal, setShowModal] = useState(true);
 
   const openModal = () => {
     setShowModal(!showModal);
   };
+
+
+  // fetch( "http://localhost:3500/popular" )
+  //   .then( ( res ) => res.json() )
+  //   .then( ( data ) => console.log( data ) );
+
 
   return (
     <HashRouter>

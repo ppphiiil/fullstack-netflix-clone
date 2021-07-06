@@ -14,6 +14,11 @@ body {
   background-color: var(--mainBlack);
   color: var(--mainWhite);
   font-family: 'Roboto', sans-serif !important;
+  scroll-behavior: smooth;
+  
+  /* becaus the slider has items outside of the page, overflow hidden does not work with zoom item */
+  overflow-x: hidden;
+
 }
 
 .text-white {
