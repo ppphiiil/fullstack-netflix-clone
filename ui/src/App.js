@@ -11,6 +11,11 @@ import { NavLink, Route, Switch, HashRouter } from "react-router-dom"
 
 
 function App() {
+
+  // fetch( "http://localhost:3500/popular" )
+  //   .then( ( res ) => res.json() )
+  //   .then( ( data ) => console.log( data ) );
+
   return (
     <HashRouter>
       <div className="App">
