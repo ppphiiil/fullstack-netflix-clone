@@ -1,0 +1,92 @@
+.VideoItem-container {
+    position: relative;
+    height:max-content;
+    background-color: green;
+   top:0px;
+    transition: all 500ms ease-in-out;
+
+
+         /* pointer-events: none; */
+       
+}
+
+ .VideoItem-container:hover {
+
+    
+   
+    box-shadow: rgba(0, 0, 0, 0.527) 0px 0px 10px 10px;
+    z-index: 1000000;
+    transform: scale(1.5);
+        height:max-content;
+    top:-100px;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+   
+
+   
+} 
+
+.VideoItem-container:hover .VideoItem-detail-container{
+    display: block;
+    
+ 
+
+}
+
+.VideoItem-img {
+    /* display */
+    
+    z-index: -100000;
+
+    /* position */
+    width: 22vw;
+    height: 100%;
+
+    border-radius: 6px;
+    position: relative;
+    
+      
+}
+
+.VideoItem-detail-container {
+    display: none;
+    height:max-content;
+     position:absolute;
+    flex-direction: column;
+    background-color: #1a1919;
+    color: white;
+    padding: 20px;
+      z-index: 10000000;
+}
+
+/* .VideoItem-img:hover~ .VideoItem-detail-container {
+    display: block;
+    position: absolute;
+   
+} */
+
+.VideoItem-icon-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+}
+
+.VideoItem-icon-container > div i {
+    padding-right: 5px;
+}
+
+.VideoItem-detail-season {
+    display: flex;
+}
+.VideoItem-detail-season p {
+    padding-right: 10px;
+    white-space: nowrap;
+}
+
+.VideoItem-details {
+    font-weight: 300;
+    font-size: 0.7rem;
+}
+.VideoItem-detail-description {
+    margin-bottom: 10px;
+}
