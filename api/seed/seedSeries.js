@@ -1,7 +1,14 @@
 const mongoose = require("mongoose");
 const axios = require("axios");
 
-const Series = require("../models/seriesSchema");
+const {
+  SeriesModel,
+  SeriesModelRow1,
+  SeriesModelRow2,
+  SeriesModelRow3,
+  SeriesModelRow4,
+  SeriesModelRow5,
+} = require("../models/seriesSchema");
 
 mongoose.connect(
   "mongodb://127.0.0.1:27017/netflix-clone",
@@ -9,12 +16,12 @@ mongoose.connect(
   () => console.log("connected to netflix-clone DB")
 );
 
-const seedData = async () => {
+const seedData = async (seriesRow, model, page = 1) => {
   try {
-    await Series.deleteMany({});
+    await model.deleteMany({});
 
     const result = await axios.get(
-      "https://api.themoviedb.org/3/tv/popular?api_key=f07a453c7aaf1e5db98e6299a8b42491"
+      `https://api.themoviedb.org/3/tv/${seriesRow}?page=${page}&api_key=f07a453c7aaf1e5db98e6299a8b42491`
     );
 
     const seriesIds = result.data.results.map((item) => item.id);
@@ -30,11 +37,14 @@ const seedData = async () => {
         return fetchSeries();
       })
     );
-
+    const unwanted = [
+      94722, 1416, 65701, 1402, 456, 2734, 2527, 31910, 1622, 2190, 4057, 13945,
+      4614, 1911, 1434,
+    ];
     const seriesAll = seriesArray
-      .filter((item) => item.id !== 94722)
+      .filter((item) => !unwanted.includes(item.id))
       .map(async (item) => {
-        const series = new Series({
+        const series = new model({
           id: item.id,
           title: item.name,
           image: item.backdrop_path,
@@ -81,4 +91,9 @@ const seedData = async () => {
   mongoose.connection.close();
 };
 
-seedData();
+// seedData("popular", SeriesModel, 5);
+// seedData("popular", SeriesModelRow1, 1);
+// seedData("popular", SeriesModelRow2, 2);
+// seedData("popular", SeriesModelRow3, 3);
+// seedData("popular", SeriesModelRow4, 4);
+seedData("popular", SeriesModelRow5, 5);

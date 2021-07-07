@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import tvImages from './VideoSliderTestData/VideoSliderTestData';
 import './VideoSlider.css';
 import VideoItem from './VideoItem';
 
 export default function VideoSlider( props ) {
+    console.log( "render Videoslider.js" );
+
     /**
      * current position of all images, 0vw is the first image, +80vw is the second image,...
      * @type {number}
@@ -11,13 +13,22 @@ export default function VideoSlider( props ) {
     let [position, setposition] = useState( 0 );
     console.log( position );
 
+
+
+
+    console.log( "props.fetchedData", props.fetchedData.data );
+    let rowdata = props.fetchedData.data;
+    console.log( "rowdata", rowdata );
+
     /**
          * put images in array (HTML Selection.children)
          * @type  {Array of img Elements}
          */
     // let images = [...document.querySelector( '.slider-image-container' ).children];
-    let images = tvImages.map( tvImage => {
-        return <VideoItem videoLink={ tvImage.videoLink } />;
+
+    let images = rowdata && rowdata.map( ( tv, index ) => {
+        return <VideoItem data={ tv } key={ index } />;
+
     } );
 
     /**
@@ -43,10 +54,6 @@ export default function VideoSlider( props ) {
 
         setposition( position + 90 );
 
-        //move each image
-        images.map( image => {
-            //transform = `translateX(${position}vw)
-        } );
     };
 
     /**
@@ -74,10 +81,10 @@ export default function VideoSlider( props ) {
                 </div>
                 <div className="nav-buttons ">
                     <button id="left" onClick={ ( e ) => { left( e ) } } className="navstyle nav-left">
-                        <i class="fa-3x fas fa-chevron-left" />
+                        <i className="fa-3x fas fa-chevron-left" />
                     </button>
                     <button id="right" onClick={ right } className="navstyle nav-right">
-                        <i class="fas fa-chevron-right fa-3x" />
+                        <i className="fas fa-chevron-right fa-3x" />
                     </button>
 
                 </div>
