@@ -8,7 +8,7 @@
 /series/row/{rowNumber}
 - 1 series from 1 row
 /series/row/{rowNumber}/{id}
-- video
+- video =>
 /video/{episodeNumber}
 
 -------------------------------------------------------
