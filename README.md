@@ -1,13 +1,15 @@
 # fullstack-netflix-clone
 
-### all series
+- all series
 /series
-### 1 series
+- 1 series
 /series/{id}
-### 1 row
+- 1 row
 /series/row/{rowNumber}
-### 1 series from 1 row
+- 1 series from 1 row
 /series/row/{rowNumber}/{id}
+- video
+/video/{episodeNumber}
 
 -------------------------------------------------------
 
