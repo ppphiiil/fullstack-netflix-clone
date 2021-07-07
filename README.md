@@ -1,5 +1,6 @@
 # fullstack-netflix-clone
 
+### URL
 - all series  
 => /series
 - 1 series  
