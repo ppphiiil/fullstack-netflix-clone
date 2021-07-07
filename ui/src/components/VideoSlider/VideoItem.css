@@ -1,7 +1,9 @@
 .VideoItem-container {
     position: relative;
-   
-    transition: transform 500ms ease-in-out;
+    height:max-content;
+    background-color: green;
+   top:0px;
+    transition: all 500ms ease-in-out;
 
 
          /* pointer-events: none; */
@@ -10,12 +12,14 @@
 
  .VideoItem-container:hover {
 
-    height:100%;
+    
    
     box-shadow: rgba(0, 0, 0, 0.527) 0px 0px 10px 10px;
     z-index: 1000000;
     transform: scale(1.5);
-    transition: transform 500ms ease-in-out;
+        height:max-content;
+    top:-100px;
+    transition: all 500ms ease-in-out;
     cursor: pointer;
    
 
@@ -24,7 +28,7 @@
 
 .VideoItem-container:hover .VideoItem-detail-container{
     display: block;
-     position:absolute;
+    
  
 
 }
@@ -46,7 +50,7 @@
 
 .VideoItem-detail-container {
     display: none;
-    height:100%;
+    height:max-content;
      position:absolute;
     flex-direction: column;
     background-color: #1a1919;
