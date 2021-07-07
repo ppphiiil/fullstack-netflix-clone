@@ -1,5 +1,14 @@
 # fullstack-netflix-clone
 
+### all series
+/series
+### 1 series
+/series/{id}
+### 1 row
+/series/row/{rowNumber}
+### 1 series from 1 row
+/series/row/{rowNumber}/{id}
+
 -------------------------------------------------------
 
 # The Netflix Clone project
