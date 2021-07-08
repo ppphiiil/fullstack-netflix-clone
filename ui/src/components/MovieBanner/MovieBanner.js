@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-// import LazyHero from 'react-lazy-hero';
-import styled from 'styled-components';
-import './MovieBanner.css';
+import React, { Component } from "react";
+import "./MovieBanner.css";
 
 export class MovieBanner extends Component {
   render() {
@@ -20,7 +18,7 @@ export class MovieBanner extends Component {
             <div className="movie-button-container">
               <button type="button" className="play-btn">
                 <span>
-                  <i class="fas fa-play"></i>
+                  <i className="fas fa-play"></i>
                 </span>
                 play
               </button>

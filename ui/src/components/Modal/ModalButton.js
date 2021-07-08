@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { ModalWindow } from './ModalWindow';
+import React from "react";
+import styled from "styled-components";
 
 const Container = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Button = styled.button`
@@ -18,8 +16,7 @@ const Button = styled.button`
   cursor: pointer;
 `;
 
-export default function ModalButton( props ) {
-
+export default function ModalButton(props) {
   //console.log( props.openModal );
   // const [showModal, setShowModal] = useState(false);
 
@@ -29,21 +26,20 @@ export default function ModalButton( props ) {
 
   const handleClick = () => {
     props.openModal();
-    props.selectItem( props.data )
-    console.log( "CLICKKKKKKK the ModalButton" );
+    props.selectItem(props.data);
+    console.log("CLICKKKKKKK the ModalButton");
     // console.log( "props.data", props.data );
-
-  }
+  };
 
   return (
     <div>
       <Container>
-        {/* <img src={ props.data.image } alt="" width="240" /> */ }
+        {/* <img src={ props.data.image } alt="" width="240" /> */}
 
-        {/* {props.data.img} */ }
+        {/* {props.data.img} */}
 
-        <Button onClick={ handleClick }>
-          <i class="fa-2x  fas fa-info-circle" />
+        <Button onClick={handleClick}>
+          <i className="fa-2x  fas fa-info-circle" />
         </Button>
 
         {/* <div className="VideoItem-detail-container">
@@ -73,7 +69,7 @@ export default function ModalButton( props ) {
             <p className="VideoItem-detail-genre">Test - Test -Test</p>
           </div>
         </div> */}
-        {/* <ModalWindow showModal={showModal} setShowModal={setShowModal} /> */ }
+        {/* <ModalWindow showModal={showModal} setShowModal={setShowModal} /> */}
       </Container>
     </div>
   );
