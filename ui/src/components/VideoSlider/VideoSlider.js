@@ -11,11 +11,11 @@ export default function VideoSlider( props ) {
    * @type {number}
    */
   let [position, setposition] = useState( 0 );
-  console.log( position );
+  // console.log( position );
 
-  console.log( 'props.fetchedData', props.fetchedData.data );
+  // console.log( 'props.fetchedData', props.fetchedData.data );
   let rowdata = props.fetchedData.data;
-  console.log( 'rowdata', rowdata );
+  // console.log( 'rowdata', rowdata );
 
   /**
    * put images in array (HTML Selection.children)
@@ -40,9 +40,9 @@ export default function VideoSlider( props ) {
    */
   const left = ( e ) => {
     //stop moving at the end
-    console.log( 'event', e );
+    // console.log( 'event', e );
     e.stopPropagation(); //prevent from flickering
-    console.log( 'move to right', position );
+    // console.log( 'move to right', position );
 
     setposition( position + 90 );
   };
@@ -52,12 +52,12 @@ export default function VideoSlider( props ) {
    */
   const right = () => {
     //stop moving at the end
-    console.log( 'move to left', position );
+    // console.log( 'move to left', position );
     setposition( position - 90 );
   };
 
   return (
-    <div>
+    <div className="phil">
       <div className="slider-title">
         <h2>{ props.title }</h2>
       </div>

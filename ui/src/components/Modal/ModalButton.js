@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { ModalWindow } from './ModalWindow';
 
 const Container = styled.div`
-    display: flex,
+    display: flex;
     justify-content: center;
     align-items: center;
     
@@ -19,7 +19,8 @@ const Button = styled.button`
 `;
 
 export default function ModalButton( props ) {
-  console.log( props.openModal );
+
+  //console.log( props.openModal );
   // const [showModal, setShowModal] = useState(false);
 
   // const openModal = () => {
@@ -29,6 +30,7 @@ export default function ModalButton( props ) {
   const handleClick = () => {
     props.openModal();
     props.selectItem( props.data )
+    console.log( "CLICKKKKKKK the ModalButton" );
     // console.log( "props.data", props.data );
 
   }

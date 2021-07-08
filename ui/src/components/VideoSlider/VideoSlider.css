@@ -1,12 +1,13 @@
 .slider {
   /* display */
+ 
   width: 90vw;
   height: 100%;
 
   /* position */
   position: relative;
   margin: 0px auto;
-  margin-bottom: 30px;
+  margin-bottom: 130px;
   /* overflow-x: hidden; */
 }
 
@@ -47,7 +48,7 @@
   right: 0px;
   position: absolute;
   top: 0px;
-  z-index: 10000;
+  z-index: 10;
 }
 
 .nav-left {
@@ -55,11 +56,12 @@
   left: 0px;
   position: absolute;
   top: 0px;
-  z-index: 10000;
+  z-index: 10;
 }
 
 .navstyle {
   /* position */
+  
   width: 5%;
   /* styling */
   color: white;

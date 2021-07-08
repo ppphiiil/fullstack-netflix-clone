@@ -1,7 +1,8 @@
-import React, { useRef, useEffect, useCallback } from 'react';
+import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styled from 'styled-components';
 import { MdClose } from 'react-icons/md';
+import EpisodesContainer from './EpisodesContainer';
 
 const Background = styled.div`
     width: 100%;
@@ -19,7 +20,7 @@ const Background = styled.div`
 
 const ModalWrapper = styled.div`
   width: 80%;
-  height: 60%;
+  /* height: 60%; */
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
   background: var(--mainBlack);
   color: var(--justWhite);
@@ -28,6 +29,12 @@ const ModalWrapper = styled.div`
   position: relative;
   z-index: 10;
   border-radius: 5px;
+  overflow: auto;
+
+/* .example::-webkit-scrollbar {
+    display: none;
+} */
+  
 `;
 
 const ModalImg = styled.img`
@@ -35,6 +42,15 @@ const ModalImg = styled.img`
   height: 100%;
   border-radius: 5px;
   background: #000;
+`;
+
+
+const SeasonBtnContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex - start;
+
 `;
 
 const ModalContent = styled.div`
@@ -49,9 +65,10 @@ const ModalContent = styled.div`
   }
   button {
     padding: 10px 24px;
-    background: #141414;
-    color: #fff;
+    background: #c4c0c0;
+    color: #000000;
     border: none;
+    margin-right:5px;
   }
 `;
 
@@ -66,8 +83,17 @@ const CloseModalButton = styled( MdClose )`
   z-index: 10;
 `;
 
-export const ModalWindow = ( { showModal, setShowModal, select } ) => {
+export const ModalWindow = ( { showModal, setShowModal, select, } ) => {
+  console.log( "render ModalWindow" );
   const modalRef = useRef();
+
+  const [selectedSeason, setSelectedSeason] = useState( select ? select.seasons[0] : null )
+
+  useEffect( () => {
+    setSelectedSeason( select ? select.seasons[0] : null )
+  }, [select] )
+
+  // console.log( "select", select );
 
   // const animation = useSpring({
   //   config: {
@@ -92,6 +118,10 @@ export const ModalWindow = ( { showModal, setShowModal, select } ) => {
     // [setShowModal, showModal]
   );
 
+  // const seasons = select.seasons.map( ( item ) => {
+  //   return <h2>{ item.title }</h2>
+  // } )
+
   useEffect( () => {
     document.addEventListener( 'keydown', keyPress );
     return () => document.removeEventListener( 'keydown', keyPress );
@@ -109,13 +139,21 @@ export const ModalWindow = ( { showModal, setShowModal, select } ) => {
               alt="movie"
             />
             <ModalContent>
-              <h1>the movie name</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore
-                animi sed laboriosam nesciunt perferendis earum suscipit
-                exercitationem adipisci eveniet ipsam?
-              </p>
               <button>Play</button>
+              <h1>{ select.title }</h1>
+              <p>
+                { select.overview }
+              </p>
+              {/* Seasons */ }
+              <SeasonBtnContainer >  { select.seasons.map( ( item, index ) => {
+                return <button className="seasonBtn" onClick={ () => setSelectedSeason( item ) } >{ `Season ${index + 1}` }</button>
+              } )
+
+
+              }</SeasonBtnContainer>
+
+              <h2>Episodes</h2>
+              <EpisodesContainer selectedSeason={ selectedSeason } />
             </ModalContent>
             <CloseModalButton
               aria-label="Close modal"

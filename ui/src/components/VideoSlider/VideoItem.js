@@ -5,12 +5,12 @@ import ModalButton from './../Modal/ModalButton';
 export default function VideoItem( props ) {
   console.log( 'render VideoItem.js' );
 
-  console.log( 'Props', props );
+  // console.log( 'Props', props );
 
   const seasons_number = props.data.seasons.length;
-  console.log( 'seasons_number', seasons_number );
+  // console.log( 'seasons_number', seasons_number );
   const year = props.data.year.slice( 0, 4 );
-  console.log( 'year', year );
+  // console.log( 'year', year );
 
   return (
     <a to="/">

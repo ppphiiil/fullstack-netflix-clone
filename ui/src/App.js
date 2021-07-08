@@ -13,6 +13,8 @@ import { NavLink, Route, Switch, HashRouter } from 'react-router-dom';
 
 function App() {
   const [showModal, setShowModal] = useState( false );
+
+  // Data
   const [select, setSelect] = useState( null );
 
   const openModal = () => {
@@ -20,17 +22,41 @@ function App() {
   };
   console.log( 'render App.js' );
 
-  const [fetchedData, setFetchedData] = useState( [] );
+  const [fetchedData1, setFetchedData1] = useState( [] );
+  const [fetchedData2, setFetchedData2] = useState( [] );
+  const [fetchedData3, setFetchedData3] = useState( [] );
+  const [fetchedData4, setFetchedData4] = useState( [] );
+  const [fetchedData5, setFetchedData5] = useState( [] );
 
   useEffect( () => {
     console.log( 'fetch data now' );
     fetch( 'http://localhost:3000/series/row/1' )
       .then( ( res ) => res.json() )
-      .then( ( data ) => setFetchedData( data ) )
+      .then( ( data ) => setFetchedData1( data ) )
+      .catch( ( err ) => console.log( 'err:', err ) );
+
+    fetch( 'http://localhost:3000/series/row/2' )
+      .then( ( res ) => res.json() )
+      .then( ( data ) => setFetchedData2( data ) )
+      .catch( ( err ) => console.log( 'err:', err ) );
+
+    fetch( 'http://localhost:3000/series/row/3' )
+      .then( ( res ) => res.json() )
+      .then( ( data ) => setFetchedData3( data ) )
+      .catch( ( err ) => console.log( 'err:', err ) );
+
+    fetch( 'http://localhost:3000/series/row/4' )
+      .then( ( res ) => res.json() )
+      .then( ( data ) => setFetchedData4( data ) )
+      .catch( ( err ) => console.log( 'err:', err ) );
+
+    fetch( 'http://localhost:3000/series/row/5' )
+      .then( ( res ) => res.json() )
+      .then( ( data ) => setFetchedData5( data ) )
       .catch( ( err ) => console.log( 'err:', err ) );
     console.log( 'finished fatching data' );
   }, [] );
-  console.log( 'fetcheddata', fetchedData );
+
 
   useEffect( () => {
     setShowModal( true )
@@ -54,7 +80,34 @@ function App() {
           <Route exact path="/">
             <Hero />
             <VideoSlider
-              fetchedData={ fetchedData ? fetchedData : [] }
+              fetchedData={ fetchedData1 ? fetchedData1 : [] }
+              title={ 'Popular on Netflix' }
+              openModal={ openModal }
+              selectItem={ selectItem }
+              className={ "test1" }
+            />
+
+            <VideoSlider
+              fetchedData={ fetchedData2 ? fetchedData2 : [] }
+              title={ 'Popular on Netflix' }
+              openModal={ openModal }
+              selectItem={ selectItem }
+
+            />
+            <VideoSlider
+              fetchedData={ fetchedData3 ? fetchedData3 : [] }
+              title={ 'Popular on Netflix' }
+              openModal={ openModal }
+              selectItem={ selectItem }
+            />
+            <VideoSlider
+              fetchedData={ fetchedData4 ? fetchedData4 : [] }
+              title={ 'Popular on Netflix' }
+              openModal={ openModal }
+              selectItem={ selectItem }
+            />
+            <VideoSlider
+              fetchedData={ fetchedData5 ? fetchedData5 : [] }
               title={ 'Popular on Netflix' }
               openModal={ openModal }
               selectItem={ selectItem }
