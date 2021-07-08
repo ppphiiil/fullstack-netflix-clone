@@ -11,6 +11,7 @@ export default function VideoItem( props ) {
   // console.log( 'seasons_number', seasons_number );
   const year = props.data.year.slice( 0, 4 );
   // console.log( 'year', year );
+  const overflowText = props.data.overview.slice( 0, 200 );
 
   return (
     <a to="/">
@@ -46,7 +47,7 @@ export default function VideoItem( props ) {
             </div>
             <p className="VideoItem-detail-description">{ props.data.title }</p>
             <p className="VideoItem-detail-description">
-              { props.data.overview }
+              { overflowText }
             </p>
             <p className="VideoItem-detail-genre">{ props.data.genres }</p>
           </div>

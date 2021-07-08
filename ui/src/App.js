@@ -30,27 +30,27 @@ function App() {
 
   useEffect( () => {
     console.log( 'fetch data now' );
-    fetch( 'http://localhost:3000/series/row/1' )
+    fetch( 'http://localhost:3500/series/row/1' )
       .then( ( res ) => res.json() )
       .then( ( data ) => setFetchedData1( data ) )
       .catch( ( err ) => console.log( 'err:', err ) );
 
-    fetch( 'http://localhost:3000/series/row/2' )
+    fetch( 'http://localhost:3500/series/row/2' )
       .then( ( res ) => res.json() )
       .then( ( data ) => setFetchedData2( data ) )
       .catch( ( err ) => console.log( 'err:', err ) );
 
-    fetch( 'http://localhost:3000/series/row/3' )
+    fetch( 'http://localhost:3500/series/row/3' )
       .then( ( res ) => res.json() )
       .then( ( data ) => setFetchedData3( data ) )
       .catch( ( err ) => console.log( 'err:', err ) );
 
-    fetch( 'http://localhost:3000/series/row/4' )
+    fetch( 'http://localhost:3500/series/row/4' )
       .then( ( res ) => res.json() )
       .then( ( data ) => setFetchedData4( data ) )
       .catch( ( err ) => console.log( 'err:', err ) );
 
-    fetch( 'http://localhost:3000/series/row/5' )
+    fetch( 'http://localhost:3500/series/row/5' )
       .then( ( res ) => res.json() )
       .then( ( data ) => setFetchedData5( data ) )
       .catch( ( err ) => console.log( 'err:', err ) );

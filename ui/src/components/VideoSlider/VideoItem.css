@@ -19,7 +19,7 @@
     z-index: 1000000;
     transform: scale(1.2);
     height:max-content;
-    top:-80px;
+    top:-120px;
     transition: all 500ms ease-in-out;
     cursor: pointer;
    
