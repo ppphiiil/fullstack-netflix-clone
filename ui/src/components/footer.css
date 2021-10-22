@@ -102,18 +102,6 @@ h2{
 
 /* ================================= Reset */
 
-*::before,
-*::after,
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
-@import url("https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap");
-
-:root {
-    font-family: "Martel Sans", Verdana, Geneva, Tahoma, sans-serif;
-}
 
 /* ================================= Reset End */

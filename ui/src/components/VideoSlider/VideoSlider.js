@@ -30,7 +30,7 @@ export default function VideoSlider(props) {
           selectItem={props.selectItem}
           data={tv}
           key={index}
-          openModal={props.openModal}
+          
         />
       );
     });
@@ -63,7 +63,7 @@ export default function VideoSlider(props) {
   };
 
   return (
-    <div className="phil">
+    <div className="slider-container">
       <div className="slider-title">
         <h2>{props.title}</h2>
       </div>

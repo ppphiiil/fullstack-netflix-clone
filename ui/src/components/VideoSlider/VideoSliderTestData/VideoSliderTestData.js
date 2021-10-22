@@ -1,4 +1,4 @@
-const tvImages = [
+const testData = [
     {
         videoLink: 'https://www.themoviedb.org/t/p/original/9yBVqNruk6Ykrwc32qrK2TIE5xw.jpg',
     },
@@ -39,4 +39,4 @@ const tvImages = [
     },
 ];
 
-export default tvImages;
+export default testData;

@@ -10,32 +10,32 @@ export default class Navbar extends Component {
         <div className="navbar">
           <Router>
             <Link to="/">
-              <img
+              <img className="logo"
                 src={logo}
                 alt="netflix"
-                className="navbar-band img-company"
+              
               />
             </Link>
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link to="/" className="nav-link">
+              
                   home
-                </Link>
+             
               </li>
               <li className="nav-item">
-                <Link to="/tv-shows" className="nav-link">
-                  <span style={{ textTransform: 'uppercase' }}>tv</span>shows
-                </Link>
+                
+                  TVshows
+               
               </li>
               <li className="nav-item">
-                <Link to="/movies" className="nav-link">
+              
                   movies
-                </Link>
+              
               </li>
               <li className="nav-item">
-                <Link to="/latest" className="nav-link">
+               
                   latest
-                </Link>
+              
               </li>
             </ul>
           </Router>

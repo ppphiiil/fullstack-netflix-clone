@@ -1,6 +1,6 @@
 import React from "react";
 import "./VideoItem.css";
-import ModalButton from "./../Modal/ModalButton";
+
 
 export default function VideoItem(props) {
   // console.log("render VideoItem.js");
@@ -27,11 +27,7 @@ export default function VideoItem(props) {
             <i className=" fa-2x far fa-arrow-alt-circle-up" />
             <i className=" fa-2x far fa-arrow-alt-circle-down" />
           </div>
-          <ModalButton
-            selectItem={props.selectItem}
-            data={props.data}
-            openModal={props.openModal}
-          ></ModalButton>
+        
           {/* <i className="fa-2x  fas fa-info-circle" /> */}
         </div>
         <div className="VideoItem-details">

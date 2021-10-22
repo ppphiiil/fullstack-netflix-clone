@@ -1,3 +1,9 @@
+.slider-container{
+  margin-top: 100px;
+  margin: 0px 50px;;
+}
+
+
 .slider {
   /* display */
  
@@ -6,13 +12,15 @@
 
   /* position */
   position: relative;
-  margin: 0px auto;
-  margin-bottom: 130px;
+  
+
+  margin-bottom: 100px;
+
   /* overflow-x: hidden; */
 }
 
 .slider-title {
-  padding-left: 5%;
+
 
   margin: 0 auto;
   margin-bottom: 5px;
